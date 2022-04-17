@@ -1,3 +1,4 @@
+src/_data/donors.csv
 node_modules/
 dist/
 .netlify
