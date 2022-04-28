@@ -6,6 +6,8 @@
   "scripts": {
     "develop": "eleventy --serve",
     "build": "eleventy",
-    "fetch": "curl -L -o src/_data/donors.csv ${DATA_CSV_URL}"
+    "fetch:linux": "curl -L -o src/_data/donors.csv ${DATA_CSV_URL}",
+    "fetch:win64": "curl -L -o src/_data/donors.csv %DATA_CSV_URL%"
+
   }
 }

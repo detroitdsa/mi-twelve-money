@@ -1,13 +1,81 @@
 <!doctype html>
 <html lang="en">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>    
-        <link rel="stylesheet" href="/asset/css/style.css">
     </head>
-    
+
+
     <body>
-        {{ content | safe }}
+        {% block header %}
+        <div class="header">
+            <img src="https://assets.nationbuilder.com/detroitdsa/sites/1/meta_images/original/DetroitDSA%E2%80%93Color-transp.png?1558835458"></img>
+        </div>
+        {% endblock %}    
+        {% block content %}
+        <div>
+            <h2>Total Support</h2>
+            <p class="total-donation">$100,000</p>
+        </div>
+
+        <div class="select">
+              <select style="display:none"  name="" multiple>
+                    {% for row in donors %}
+                        <option value={{ row.contributor_first_name }}+" "+{{ row.contributor_last_name }} >{{ row.contributor_first_name }} {{ row.contributor_last_name }}</option>
+                    {% endfor %}
+
+              </select>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for row in donors %}
+                    <div class="swiper-slide"> 
+                        <img class="slide-image" src="https://toplawyer.law/wp-content/uploads/2021/07/Rapper-Mugshots-Snoop-Dog-mugshot.jpg"></img>
+                        <h3>
+                            {{ row.contributor_first_name }} {{ row.contributor_last_name }}
+                        </h3>
+                        <p>Contribution Total: ${{row.contribution_receipt_amount}}</p>
+                        {{ row.committee_name }} -  - 
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div>
+            <h2>Fed Up?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
+        </div>
+        {% endblock %}
     </body>
+
+
+
+    <script>
+
+    </script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView:3.5,
+        spaceBetween:10,
+        slidesOffsetAfter:10,
+        slidesOffsetBefore:10,
+        centeredSlides: true,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+          });  
+    </script>
 </html>

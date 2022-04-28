@@ -1,5 +1,5 @@
 [build]
     base = ""
     publish = "dist"
-    command = "npm run fetch && npm run build"
-    DATA_CSV_URL = "https://docs.google.com/.../export?format=csv&gid=0"
+    command = "npm run fetch:win64 && npm run build"
+    DATA_CSV_URL = "https://docs.google.com/spreadsheets/d/1u8fSPEYzcmBkzH5lpuWNRwGKXsTnKcwI97uE4P36UVU/edit?usp=sharing"
