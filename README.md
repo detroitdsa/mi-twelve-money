@@ -6,9 +6,16 @@ Start by installing dependencies and downloading the donor information:
 
 ```
 npm install
-export DATA_CSV_URL="https://..."
-npm run fetch
+export DATA_CSV_URL="https://..." - https://docs.google.com/spreadsheets/d/1u8fSPEYzcmBkzH5lpuWNRwGKXsTnKcwI97uE4P36UVU/gviz/tq?tqx=out:csv&sheet="Combined" (current one used for testing)
+
+
+npm run fetch:linux - for linux machines
+npm run fetch:win64 - for windows 64 bit machines.
+
+
+
 ```
+
 
 To start a local, live-refresh server, use
 

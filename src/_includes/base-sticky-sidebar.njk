@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/sticky-style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/high-charts-style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/accordion.css" type="text/css">
 
@@ -22,16 +22,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>    
     </head>
-    <body id="body">
+
          <div class="header">
-            <img id = "header-img" src="https://assets.nationbuilder.com/detroitdsa/sites/1/meta_images/original/DetroitDSA%E2%80%93Color-transp.png?1558835458"></img>
+            <img src="https://assets.nationbuilder.com/detroitdsa/sites/1/meta_images/original/DetroitDSA%E2%80%93Color-transp.png?1558835458"></img>
         </div>
 
 
-  <div class="container" id="navbar">
-    <nav class="nav">
-      <div>
-          <h2>FAQ</h2>
+
+<main class="content">
+
+    <section class="sub-content">
+            <h2>FAQ</h2>
           <button class="accordion">What is district 12?</button>
            <div class="panel">
              <p>Lorem ipsum...</p>
@@ -58,28 +59,13 @@
            <div class="panel">
              <p>Lorem ipsum...</p>
            </div>
-      </div>
-    </nav>
-  </div>
-  <div class="main-content">
+  </section>
+  <section class="main-content">
         <div>
             <h2>Total Support</h2>
             <p class="total-donation" id="total-donation">$0</p>
         </div>
-
-         <select id="candidateSelect" style="display: none;">
-            {% for row in collections.candidates %}
-                    <option value={{ row.Candidate }}>{{ row.Candidate}}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <select id="tagSelect" style="display: none;">
-            {% for row in collections.Tags %}
-                    <option value={{ row }} >{{ row }}</option>
-            {% endfor %}
-        </select>
-        <div>
-             <h2>
+            <h2>
                 PACs funding in this race
             </h2>
 
@@ -100,7 +86,7 @@
                         <h3>
                             {{ row.contributor_first_name }} {{ row.contributor_last_name }}
                         </h3>
-                        <p class="swiper-descripton">Contribution Total: ${{row.contribution_receipt_amount}}</p>
+                        <p>Contribution Total: ${{row.contribution_receipt_amount}}</p>
                         {{ row.committee_name }} -  - 
                     </div>
                 {% endfor %}
@@ -113,10 +99,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
         </div>
         </div>
-  </div>
-</body>
+ </section>
 
-
+  
+</main>
 
 <script>
 var acc = document.getElementsByClassName("accordion");
@@ -307,12 +293,10 @@ Highcharts.chart('graphs', {
 
     var total_amount = 0;
     
-
     const candidatesjs = {{ collections.candidates | dump(2) | safe }};
     const tagjs =  {{ collections.Tags | dump(2) | safe }};
     const arr =  {{ donors | dump(2) | safe }};
 
-    console.log(arr);
     arr.forEach(element => {
     if (element["Candidate"] == "Janice Winfrey")
     {
@@ -322,6 +306,7 @@ Highcharts.chart('graphs', {
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
+
     async function donationTickerReal()
     {
         donation = document.getElementById("total-donation");
@@ -343,6 +328,9 @@ Highcharts.chart('graphs', {
 
     
 </script>
+
+
+
     <script>
         const swiper = new Swiper('.swiper', {
         // Optional parameters
@@ -350,8 +338,8 @@ Highcharts.chart('graphs', {
         loop: true,
         slidesPerView:3,
         spaceBetween:4,
-        slidesOffsetAfter:10,
-        slidesOffsetBefore:10,
+        slidesOffsetAfter:15,
+        slidesOffsetBefore:15,
         centeredSlides: true,
         // Navigation arrows
         navigation: {

@@ -1,19 +1,45 @@
+body{
+    margin:0px;
+}
 
 .header{
     background-color: #353535;    
     text-align:center;
     margin-top: 0px;
-    width: 100%;
+    margin-left: 20vw;
+    width: 80vw;
+} 
+#header-img{
+  width: clamp(10px,80vw,500px);
+
 }
 
-body{
+.content {
     margin:0px;
-
+    padding:0;
+    display: flex;
+    gap: 1vw;
 }
+
+/* .sub-content {
+    background-color: #f1f1f1;
+    margin: 10px 0 20px;
+    padding: 1vw;
+    position: sticky;
+    height: fit-content;
+    top: 2vh;
+    width: 20vw;
+} */
+
+
+
+
 
 .swiper {
-    height:400px;
-    overflow: unset;
+    height: 50vh;
+    margin-left: unset;
+    margin-right:unset;
+    overflow-x: hidden;
   }
 
 .swiper-slide{
@@ -21,10 +47,21 @@ body{
     box-shadow: 0 0 16px 6px rgb(0 0 0 / 35%);    
     border-radius: 10px;
     margin-top: 16px;
-    height: 100%;
+    font-size: clamp(12px,1vw,20px);
     overflow: hidden;
 }
 
+
+
+.swiper-descripton{
+    overflow-y: auto;
+    -ms-overflow-style: none; /* Edge, Internet Explorer */
+    scrollbar-width: none; /* Firefox */
+}
+
+.swiper-descripton::-webkit-scrollbar {
+  display: none;
+}
 .slide-image{
     width: 100%;
     height: 116.6px;
@@ -48,9 +85,72 @@ h2:after, h2:before {
 }
 h2 {
     display: flex;
+    font-size: 3vw;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin: 1em 0;
-    margin-top:2em;
-}
+} 
+
+
+:root {
+    --nav-width: 20vw;
+  
+    /* === Colors === */
+    --primary-color: #623cea;
+    --bg-color: #12192c;
+    --sub-color: #b6cefc;
+    --white-color: #ffff;
+  
+    --body-font: "Poppins", sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --z-fixed: 100;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: 0.5s;
+  }
+  
+  
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    overflow: auto;
+    -ms-overflow-style: none; /* Edge, Internet Explorer */
+    scrollbar-width: none; /* Firefox */
+    padding: 1vw 1vw 2vw;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+    transition: 0.5s;
+    z-index: var(--z-fixed);
+  }
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  
+  .main-content{
+    margin-left: 20.5vw;
+    display: block;
+  }
