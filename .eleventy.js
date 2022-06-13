@@ -49,6 +49,11 @@ module.exports = function(eleventyConfig) {
         return records;
     });
 
+
+    eleventyConfig.addNunjucksFilter('split', function(str, seperator) {
+            return str.split(seperator);
+    }        
+    );
    eleventyConfig.addCollection("candidates", function(collectionApi) {
         return getCandidates(records);
     });
