@@ -11,38 +11,32 @@ function readCSV() {
   return records;
 }
 
-function getCandidates(records) {
-    candidates = [];
+function getPACS(records) {
+    PACS = [];
     records.forEach(row =>{
-        if(row.entity_type=="CAN")
+        if(row.entity_type=="POLITICAL ACTION COMMITTEE" || row.entity_type=="PAC")
         {
-            candidates.push(row);
+            PACS.push(row);
         }
       });
-    return candidates;
+    return PACS;
 }
 
 
-function getCollection(records,tag_name)
-{
-    collection = [];
+function getInd(records) {
+    IND = [];
     records.forEach(row =>{
-        tags = row.Tags.split(",");
-        if(tags.includes(tag_name))
+        if(row.entity_type=="INDIVIDUAL" || row.entity_type=="IND" || row.entity_type=="CAN" || row.entity_type=="CANDIDATE")
         {
-            collection.push(row);
+            IND.push(row);
         }
       });
-
-    return collection;
-
+    return IND;
 }
 
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
-    eleventyConfig.addPassthroughCopy('./src/pureScriptSelect');
-    eleventyConfig.addPassthroughCopy('./src/leaflet');
     const records = readCSV();
     var tag_list= [];
     eleventyConfig.addDataExtension("csv", (contents) => {
@@ -54,16 +48,38 @@ module.exports = function(eleventyConfig) {
             return str.split(seperator);
     }        
     );
-   eleventyConfig.addCollection("candidates", function(collectionApi) {
-        return getCandidates(records);
+    eleventyConfig.addNunjucksFilter('replacePAC', function(str) {
+
+        const regex_long = new RegExp('(Political Action Committee)',"i");
+        const regex_short = new RegExp('(Pac)',"i");
+        var mid_str = str.replace(regex_long,"PAC");
+        return mid_str.replace(regex_short,"PAC");
+    }        
+    );
+
+    eleventyConfig.addNunjucksFilter('moneyLocale', function(str) {
+        var num = parseInt(str.replace(",",""));
+        return (Math.round(num * 100) / 100).toLocaleString();
+    }        
+    );
+    eleventyConfig.addNunjucksFilter('capitalizeName', function(str) {
+
+        const arr = str.split(" ");
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].toLowerCase();
+            arr[i] = arr[i][0].toUpperCase()+ arr[i].substr(1);
+        }
+        return arr.join(" ");
+    }        
+    );
+   eleventyConfig.addCollection("pacs", function(collectionApi) {
+        return getPACS(records);
     });
-    records.forEach(row =>
-    {
-        var tags = row.Tags.split(",");
-        tags.forEach( tag =>{
-        if (tag_list.indexOf(tag) === -1) tag_list.push(tag);
-        });
+    eleventyConfig.addCollection("ind", function(collectionApi) {
+        return getInd(records);
     });
+
 
     eleventyConfig.addFilter("arr", function(value) {
         var arr = []
@@ -72,16 +88,7 @@ module.exports = function(eleventyConfig) {
         });
         return arr;
       });
-    eleventyConfig.addCollection("Tags",function(collectionApi){
-        return tag_list;
-    });
 
-    tag_list.forEach( tag => {
-        eleventyConfig.addCollection(tag, function(collectionApi){
-            var new_collection = getCollection(records,tag);
-            return new_collection;
-        });
-    });
     
     return {
         templateFormats: ["md", "njk", "html", "liquid"],
