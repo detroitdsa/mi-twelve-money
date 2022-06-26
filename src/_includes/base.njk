@@ -236,29 +236,29 @@ for (i = 0; i < acc.length; i++) {
     {id: '0.0',parent: '',name: 'The U.S',donors:''}, 
     {id: '1.0',parent: '0.0',name: 'In State',value: 81200,donors: 71},  
     {id: '1.1',parent: '0.0',name: 'Out of state',value: 1390416,donors: 120}, 
+    {id: '2.15',parent: '1.1',name: 'PACS',value: 1140833,donors: 4},
+    {id: '2.3',parent: '1.1',name: 'Washington D.C',value: 108333,donors: 14},  
     {id: '2.1',parent: '1.1',name: 'New York',value: 80550,donors: 66},
     {id: '2.2',parent: '1.1',name: 'New Jersey',value: 22300,donors: 10}, 
-    {id: '2.3',parent: '1.1',name: 'Washington D.C',value: 108333,donors: 14},  
-    {id: '2.4',parent: '1.1',name: 'Florida',value: 1750,donors: 3}, 
     {id: '2.5',parent: '1.1',name: 'Illinois',value: 12350,donors: 6},
-    {id: '2.6',parent: '1.1',name: 'Connecticut',value: 5400,donors: 2},
-    {id: '2.7',parent: '1.1',name: 'Ohio',value: 2000,donors: 1},
     {id: '2.8',parent: '1.1',name: 'California',value: 9150,donors: 4},
     {id: '2.9',parent: '1.1',name: 'Lousiana',value: 5500,donors: 3},
+    {id: '2.6',parent: '1.1',name: 'Connecticut',value: 5400,donors: 2},
+    {id: '2.7',parent: '1.1',name: 'Ohio',value: 2000,donors: 1},
+    {id: '2.4',parent: '1.1',name: 'Florida',value: 1750,donors: 3}, 
     {id: '2.10',parent: '1.1',name: 'Massachussets',value: 500,donors: 2},
     {id: '2.11',parent: '1.1',name: 'New Mexico',value: 250,donors: 1},
     {id: '2.12',parent: '1.1',name: 'Pennslyvania',value: 500,donors: 1},
     {id: '2.13',parent: '1.1',name: 'Texas',value: 500,donors: 1},
     {id: '2.14',parent: '1.1',name: 'Virginia',value: 500,donors: 1},
-    {id: '2.15',parent: '1.1',name: 'PACS',value: 1140833,donors: 4},
     ];
     var lobby_data=[
      {id: '0.0',parent: '',name: 'Lobbies'}, 
      {id: '1.0',parent: '0.0',name: 'Pro Israel Lobby',value: 1124437,donors: 16},  
+     {# {id: '5.0',parent: '0.0',name: 'Other',value: 183697,donors: 120},  #}
      {id: '2.0',parent: '0.0',name: 'Cops Lobby',value: 127500,donors: 2}, 
      {id: '3.0',parent: '0.0',name: 'Real Estate/Landlord Lobby',value: 25000,donors: 6}, 
      {id: '4.0',parent: '0.0',name: 'Healthcare Lobby',value: 11000,donors: 7}, 
-     {id: '5.0',parent: '0.0',name: 'Other',value: 183697,donors: 120}, 
     ]
 
 var base_color = "#00abe9";
@@ -341,7 +341,14 @@ Highcharts.chart('graphs-a', {
                     tooltip += '</b> all from <b>';
                 }
                 else{
-                    tooltip += '</b> from <b>'+this.point.donors+'</b> donors from <b>';
+                    if(this.point.name != "PACS")
+                    {
+                        tooltip += '</b> from <b>'+this.point.donors+'</b> donors from <b>';
+                    }
+                    else
+                    {
+                        tooltip += '</b> from <b>';
+                    }
                 }
                 tooltip += this.point.name+'</b>';
                 console.log(tooltip);
