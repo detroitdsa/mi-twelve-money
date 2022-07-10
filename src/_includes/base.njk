@@ -3,12 +3,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/high-charts-style.css" type="text/css">
+    {# <link rel="stylesheet" href="assets/css/highcharts.css" type="text/css"> #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
-   <link rel="icon" href="assets/dsa-logo-200x200.png">
+   <link rel="icon" href="assets/Favicon.png">
 
    
      <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
@@ -19,10 +20,11 @@
     <script src="https://code.highcharts.com/modules/sunburst.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,6 +37,7 @@
 
   <section class="main-content">
         <div class="header">
+            <img class="dollar-signs" style="margin-left:1vw;"src="assets/Dollar.png"></img>
             <div class="statement">DARK MONEY VS 
               <div class="slidingVertical">
                 <span>DETROIT</span>
@@ -47,66 +50,70 @@
                 <span>YOU</span>
               </div>
             </div>
+            <img class="dollar-signs" style="margin-right: 1vw;"src="assets/Dollar.png"></img>
         </div>
 
         <div>
             <p>
-                Who is spending to stop Rashida Tlaib's working class movement in Michigans new 12th congressional district?
+                Working-class fighter <b>Rashida Tlaib</b> is running for election to US Congress in Southeast Michigan’s new 12th district. Mega-wealthy donors and dark money groups are pouring millions into the race to stop her.
+            </p>
+            <p>
+                Who is trying to buy this election, and why? We’re a team of volunteers who combed through the Federal Election Committee filings on the election.
+            </p>
+            <p>
+                 Here’s what we found.
             </p>
         </div>
         <div>
-            <h2>Total money spent to buy the 12th district</h2>
+            <h2>How much money is being spent against Rashida?</h2>
+            <h4 style="font-weight:unset; width:96%;">We looked at the individuals and groups funding Rashida’s opponents and buying attack mailers and ads against Rashida. <br/>Here’s the total spending to date:</h4>
             <p class="total-donation" id="total-donation">$0</p>
         </div>
 
-        </div>
+        <h2>Where is all this money coming from?</h2>
 
         <div id="graph-container">
             <div  class="sunbursts" id = "graphs-a"></div>
             <div  class="sunbursts" id = "graphs-b"></div>
         </div>
-        <div>
+        <div class="main-text-right">
             <h2>
-                Why is the pro-war lobby buying this election?
+                Why are Israel-focused PACs spending millions on a race in Michigan?
             </h2>
+            <p>
+                Dark-money PACs and their friends in the billionaire class are <a class="links" href="https://www.theguardian.com/politics/2022/may/17/pro-israel-lobby-defeat-democrats-palestinians-2022">spending millions</a> to divide us against each other in Southestern Michigan. As long as the wealthy can keep us distracted and fighting each other, we won’t ask why the US government, enabled by both parties, is giving <a class="links" href="https://www.bbc.com/news/57170576">tens of billions</a> of dollars every year to fund forever wars in Israel and the Middle East — instead of spending that money on schools, infrastructure, or healthcare in Michigan.
+            </p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
-
-        </div>
-        <div>
-            <h2>
-                What does Rashida stand for?
-            </h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
-
+            <p>
+                AIPAC is one of the most
+                <a class="links" href="https://www.thenation.com/article/archive/aipac-omar-israel-congress-anti-semitism/">powerful</a> lobbying organizations in the US, and their goal is to maintain apartheid in Israel-Palestine. They are spending
+                <a class="links" href="https://www.freep.com/story/news/politics/elections/2022/04/15/rashida-tlaib-winfrey-pro-israel-donations/7334371001/"> big</a> 
+                on Rashida’s Democratic opponent.
+                They’ve also <a class="links" href="https://www.theguardian.com/us-news/2022/mar/23/aipac-pro-israel-group-backs-insurrectionist-republicans">poured millions</a> into backing 37 <i>Republicans</i> who voted against certifying Biden’s victory after the January 6 riot at the Capitol. An undemocratic, divided, and violent America makes it easier for them to keep taking money to wage genocide on Palestinians.
+            </p>
         </div>
         <div>
         <h2>
             Wall of Shame
         </h2>
-        
-            <h3 class="swiper-header">
-                PACs funding in this race
-            </h3>
 
+            <h4 style="justify-content: center;align-items: center;text-align: center;margin-left: 10vw;margin-right: 10vw;">
+                Learn more about the worst donors and PACs trying to buy this election.
+            </h4>       
          <div class="swiper" id="swiper-a">
             <div class="swiper-wrapper" style="height: 95%;">
                 {% for row in collections.pacs %}
                     <div class="swiper-slide"> 
-                        <img class="slide-image" src="https://www.politicscentral.org/wp-content/uploads/2017/08/Janice-Winfrey-534x640.jpg"></img>
+                        <div class="slide-image" style="background-image: url('{{ row.Images }}')"></div>
                         <div class="donation-details">
                         <h3>
-                            {{ row.contributor_last_name | capitalizeName | replacePAC}}
+                            {{ row.contributor_name | fixNaming | capitalizeName | replacePAC}}
                         </h3>
-                        <div class="donation-prepend">PAC: <span class="donation-amount">${{row.contribution_receipt_amount | moneyLocale}}</span></div>
+                        <div class="donation-prepend">{{row.entity_type_desc | fixType}}<span class="donation-amount">${{row.contribution_receipt_amount | moneyLocale}}</span></div>
                         </div>
                         <div class="blurb">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.
+                                {{row.draft_blurb | safe }}
                             </p>
                         </div>
 
@@ -116,44 +123,34 @@
             <div class="swiper-button-prev" id="swiper-button-prev-swiper-a"></div>
             <div class="swiper-button-next" id="swiper-button-next-swiper-a"></div>
         </div>
-            <h3 class="swiper-header">
-                Other fuckers funding in this race
-            </h3>
-            <div class="swiper" id="swiper-b">
-            <div class="swiper-wrapper" style="height: 95%;">
-                {% for row in collections.ind %}
-                    <div class="swiper-slide"> 
-                        <img class="slide-image" src="https://www.politicscentral.org/wp-content/uploads/2017/08/Janice-Winfrey-534x640.jpg"></img>
-                        <div class="donation-details">
-                            <h3>
-                                {{ row.contributor_first_name | capitalizeName}} {{ row.contributor_last_name | capitalizeName}}
-                            </h3>
-                            <div class="donation-prepend">Individual: <span class="donation-amount">${{row.contribution_receipt_amount | moneyLocale}}</span></div>
-                        </div>
-                        <div class="blurb">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.
-                            </p>
-                        </div>
-                    </div>
-                {% endfor %}
+        </div>
+        </div>
+        <div class="main-text-right">            
+
+            <h2>Rashida and the working class vs. the billionaires</h2>
+            <p>Congresswoman <a class="links" href="https://rashidaforcongress.com/">Rashida Tlaib</a> doesn’t take corporate PAC money, and she has a <a class="links" href="https://twitter.com/RashidaTlaib/status/1275920272831533056">long record</a> of fighting for the needs of her constituents. Because she’s a <a class="links" href="https://inthesetimes.com/article/rashida-tlaib-democratic-socialism-palestine-israel-michigan">democratic socialist</a>, she stands up to billionaire special interests and she fights for a united working class.
+                <b>A united working class, in Michigan or anywhere else, is the greatest threat to the Israel lobby’s rightwing, pro-war agenda.</b>
+                History shows that when ordinary people fight together in solidarity, they can remake the world. Pro-war groups like AIPAC and their wealthy friends will stop at nothing to prevent our movement from challenging their power.
+            </p>
+            <a href="https://www.metrodetroitdsa.com/dsa_4_rashida" class="involved-button">Get Involved</a>
+        </div>
+        <div>
+            <div class="main-text-right">
+            <h2>The new Congressional 12th district</h2>
+            <p>
+                Last year, Michigan <a class="links"  href="https://www.michiganradio.org/politics-government/2022-02-15/the-changes-to-michigans-congressional-map-district-by-district">redrew</a> its congressional district map. Rashida used to represent the 13th district, and is now running in the new 12th district. This map shows the boundaries of the new district. Still not sure where you fall? Look up your address <a class="links" href="https://www.washingtonpost.com/elections/interactive/find-your-congressional-district/">here</a>.
+            </p>
+            <div id="map" style="width: 100%; height:40vh; margin:auto;"></div>
             </div>
-            <div class="swiper-button-prev" id="swiper-button-prev-swiper-b"></div>
-            <div class="swiper-button-next" id="swiper-button-next-swiper-b"></div>
-        </div>
-        </div>
-        <div>
-            <h2>What is the new 12th district?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Gravida dictum fusce ut placerat orci nulla. Quis hendrerit dolor magna eget. Felis donec et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada. Mattis nunc sed blandit libero volutpat sed. Tellus molestie nunc non blandit massa enim. Tincidunt dui ut ornare lectus. Sed arcu non odio euismod lacinia at quis. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Sed elementum tempus egestas sed. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.</p>
-            <div id="map" style="width: 100%; height:40vh; margin:auto;">
-        </div>
-        <div>
-            <h2>Defend democracy defend Rashida!</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEV3zYQMKaaH7r0rTGli41JXpKxHYiMuDBheRo13znjMV_7w/viewform" class="involved-button">Get Involved</a>
-        </div>
-        <div>
-            <h2>About MDDSA</h2>
-            <p>The Democratic Socialists of America (DSA) is the largest socialist organization in the United States. We believe that the economy should be run democratically, by working people, to meet human needs, not to make profits for a few. We are an activist organization, not a political party. We oppose all forms of oppression, including those based on race, immigration status, ethnicity, religion, ability, gender, and sexuality. In local chapters around the country, DSA members are building movements for social change and establishing a democratic socialist presence in American communities and politics.</p>
+
+        <div style="margin-bottom: 2vh;">
+            <h2>Made by Metro Detroit Democratic Socialists of America</h2>
+            <p>Rashida Tlaib is a member of the <a class="links"href="https://www.metrodetroitdsa.com/">Metro Detroit</a> chapter of the <a class="links" href="https://www.dsausa.org/">Democratic Socialists of America</a> (MDDSA), and this website was made by a group of volunteers from MDDSA.
+                DSA is the largest socialist organization in the United States. We believe that the economy should be run democratically, by working people, to meet human needs, not to make profits for a few. We are an activist organization, not a political party. We oppose all forms of oppression, including those based on race, immigration status, ethnicity, religion, ability, gender, and sexuality. In local chapters around the country, DSA members are building movements for social change and establishing a democratic socialist presence in American communities and politics.
+                <br/>If you’re ready to fight for a new world through elections, workplace organizing, and mass politics, join us!
+            </p>
+            <a href="https://act.dsausa.org/donate/membership2020/" class="involved-button">Join Us!</a>
+
         </div>
         </div>
         <div class="footer">
@@ -167,321 +164,38 @@
 
   
 </main>
-
-<script>
-    async function addGeojsonMap(){
-    var map = L.map('map').setView([42.3370,-83.2733], 9.4);
-    const response = await fetch("/assets/geojson/District12.geojson");
-    const data = await response.json();
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-    }).addTo(map);
-
-    L.geoJSON(data,{
-        style:function (feature){
-            return {color: "green"};
-        }
-    }).bindPopup(function (layer){
-        return "District "+ layer.feature.properties.DISTRICTN;
-    }).addTo(map);
-    
-    return;
-    }
-
-    addGeojsonMap();
-</script>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-
-  
-<script>
-
-    function ColorLuminance(hex, lum) {
-
-	// validate hex string
-	hex = String(hex).replace(/[^0-9a-f]/gi, '');
-	if (hex.length < 6) {
-		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-	}
-	lum = lum || 0;
-
-	// convert to decimal and change luminosity
-	var rgb = "#", c, i;
-	for (i = 0; i < 3; i++) {
-		c = parseInt(hex.substr(i*2,2), 16);
-		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
-		rgb += ("00"+c).substr(c.length);
-	}
-
-	return rgb;
-}
-    var data = [
-    {id: '0.0',parent: '',name: 'The U.S',donors:''}, 
-    {id: '1.0',parent: '0.0',name: 'In State',value: 81200,donors: 71},  
-    {id: '1.1',parent: '0.0',name: 'Out of state',value: 1390416,donors: 120}, 
-    {id: '2.15',parent: '1.1',name: 'PACS',value: 1140833,donors: 4},
-    {id: '2.3',parent: '1.1',name: 'Washington D.C',value: 108333,donors: 14},  
-    {id: '2.1',parent: '1.1',name: 'New York',value: 80550,donors: 66},
-    {id: '2.2',parent: '1.1',name: 'New Jersey',value: 22300,donors: 10}, 
-    {id: '2.5',parent: '1.1',name: 'Illinois',value: 12350,donors: 6},
-    {id: '2.8',parent: '1.1',name: 'California',value: 9150,donors: 4},
-    {id: '2.9',parent: '1.1',name: 'Lousiana',value: 5500,donors: 3},
-    {id: '2.6',parent: '1.1',name: 'Connecticut',value: 5400,donors: 2},
-    {id: '2.7',parent: '1.1',name: 'Ohio',value: 2000,donors: 1},
-    {id: '2.4',parent: '1.1',name: 'Florida',value: 1750,donors: 3}, 
-    {id: '2.10',parent: '1.1',name: 'Massachussets',value: 500,donors: 2},
-    {id: '2.11',parent: '1.1',name: 'New Mexico',value: 250,donors: 1},
-    {id: '2.12',parent: '1.1',name: 'Pennslyvania',value: 500,donors: 1},
-    {id: '2.13',parent: '1.1',name: 'Texas',value: 500,donors: 1},
-    {id: '2.14',parent: '1.1',name: 'Virginia',value: 500,donors: 1},
-    ];
-    var lobby_data=[
-     {id: '0.0',parent: '',name: 'Lobbies'}, 
-     {id: '1.0',parent: '0.0',name: 'Pro Israel Lobby',value: 1124437,donors: 16},  
-     {# {id: '5.0',parent: '0.0',name: 'Other',value: 183697,donors: 120},  #}
-     {id: '2.0',parent: '0.0',name: 'Cops Lobby',value: 127500,donors: 2}, 
-     {id: '3.0',parent: '0.0',name: 'Real Estate/Landlord Lobby',value: 25000,donors: 6}, 
-     {id: '4.0',parent: '0.0',name: 'Healthcare Lobby',value: 11000,donors: 7}, 
-    ]
-
-var base_color = "#00abe9";
-var location_base_color = "#12092d";
-var black_base_color = "#000000";
-var lobby_colors = ["#00FFFFFF",base_color]
-for(var i=2;i<6;i++)
-{
-    lobby_colors[i] = ColorLuminance(base_color,-0.2*i);
-}
-var location_colors = ["#00FFFFFF",black_base_color,location_base_color]
-for(var i=2;i<20;i++)
-{
-    location_colors[i] = ColorLuminance(base_color,-0.2*i);
-}
-Highcharts.chart('graphs-a', {
-
-    chart: {
-        height: '100%'
-    },
-    clip: false,
-    accessibility: true,
-    colors: ['transparent'],
-    credits: false,
-    // Let the center circle be transparent
-
-    title: {
-        text: 'In state donations vs Out of State'
-    },
-
-    plotOptions: {
-    sunburst: {
-      dataLabels: {
-        enabled: true,
-		padding: 0,
-        rotationMode:"auto",
-        overflow: "allow",
-        connectorShape: 'crookedLine',
-        crookDistance: '90%',
-        alignTo: 'plotEdges',
-        format: '<b>{point.name}</b>'
-      },
-    },
-    },
-    series: [{
-        type: 'sunburst',
-        id:"Donor-Locations",
-        size: '100%',
-        colors: location_colors,
-        title: {
-        text: 'Donor Contributions Locations'
-        },
-        data: data,
-        name: 'Donor Contributions',
-        allowDrillToNode: true,
-        cursor: 'pointer',
-        levels: [{
-            level: 1,
-            levelIsConstant: false,
-
-        }, {
-            level: 2,
-            colorByPoint: true
-        },
-        {
-            level: 3,
-            colorByPoint: true
-        },
-]
-    }
-    ],
-    tooltip: {
-        formatter: function(){
-            if(this.series.name == "Donor Contributions")
-            {
-                console.log(this);
-                var tooltip = '<b>$';
-                tooltip += (Math.round(this.point.value * 100) / 100).toLocaleString();
-                if(this.point.donors == ''){
-                    tooltip += '</b> all from <b>';
-                }
-                else{
-                    if(this.point.name != "PACS")
-                    {
-                        tooltip += '</b> from <b>'+this.point.donors+'</b> donors from <b>';
-                    }
-                    else
-                    {
-                        tooltip += '</b> from <b>';
-                    }
-                }
-                tooltip += this.point.name+'</b>';
-                console.log(tooltip);
-                return tooltip;
-            }
-            else if(this.series.name == "Lobbys")
-            {
-                var tooltip = '<b>$';
-                tooltip += (Math.round(this.point.value * 100) / 100).toLocaleString();
-                tooltip += '</b> from <b>';
-                tooltip += this.point.name+'</b>';
-                return tooltip;
-            }
-        },
-
-            },
-
-});
+<script src="assets/js/swiper-manipulation.js"></script>
+<script src="assets/js/leaflet-map.js"></script>
+<script src="assets/js/sunbursts.js"></script>
 
 
-Highcharts.chart('graphs-b', {
-
-    chart: {
-        height: '100%'
-    },
-    clip: false,
-    accessibility: true,
-    colors: ['transparent'],
-    credits: false,
-    // Let the center circle be transparent
-
-    title: {
-        text: 'Lobbies trying to buy this race'
-    },
-
-    plotOptions: {
-    sunburst: {
-      dataLabels: {
-        enabled: true,
-		padding: 0,
-        rotationMode:"auto",
-        overflow: "allow",
-        connectorShape: 'crookedLine',
-        crookDistance: '90%',
-        alignTo: 'plotEdges',
-        format: '<b>{point.name}</b>'
-      },
-    },
-    },
-    series: [
-    {
-        type: 'sunburst',
-        colors: lobby_colors,
-        title: {
-        text: 'Lobby Contributions'
-        },
-        data: lobby_data,
-        size: '100%',
-        name: 'Lobbys',
-        allowDrillToNode: true,
-        cursor: 'pointer',
-        credits: false,
-        levels: [{
-            level: 1,
-            levelIsConstant: false,
-        }, {
-            level: 2,
-            colorByPoint: true
-        },
-        ]
-
-    }
-    ],
-    tooltip: {
-        formatter: function(){
-            if(this.series.name == "Donor Contributions")
-            {
-                console.log(this);
-                var tooltip = '<b>$';
-                tooltip += (Math.round(this.point.value * 100) / 100).toLocaleString();
-                if(this.point.donors == ''){
-                    tooltip += '</b> all from <b>';
-                }
-                else{
-                    tooltip += '</b> from <b>'+this.point.donors+'</b> donors from <b>';
-                }
-                tooltip += this.point.name+'</b>';
-                console.log(tooltip);
-                return tooltip;
-            }
-            else if(this.series.name == "Lobbys")
-            {
-                var tooltip = '<b>$';
-                tooltip += (Math.round(this.point.value * 100) / 100).toLocaleString();
-                tooltip += '</b> from <b>';
-                tooltip += this.point.name+'</b>';
-                return tooltip;
-            }
-        },
-
-            },
-
-});
-</script>
 
 
+
+{# keeping here so the script can interact with collection objects
+ #}
 <script>
 
     var total_amount = 0;
-    const pacs = {{ collections.pacs | dump(2) | safe }};
-    const arr =  {{ donors | dump(2) | safe }};
-
+    const arr = {{ collections.full | dump(2) | safe }}
     arr.forEach(element => {
-    if (element["Candidate"] == "Janice Winfrey")
-    {
-            total_amount = total_amount + parseInt(element["contribution_receipt_amount"]);
-    } 
+            var number = parseInt(element["contribution_receipt_amount"]);
+            if(!(Number.isNaN(number)))
+            {
+                total_amount = total_amount + number;
+            }
     });
     function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
-
     async function donationTickerReal()
     {
         donation = document.getElementById("total-donation");
         donation.innerText = "$0";
         var amount = 0.0;
         for(const element of arr){
-        if (element["Candidate"] == "Janice Winfrey")
-        {
             amount = amount + parseInt(element["contribution_receipt_amount"]);
             donation.innerText = "$"+ (Math.round(amount * 100) / 100).toLocaleString();
-        }
         await sleep(10);
         };
         donation.innerText = "$"+ (Math.round(total_amount * 100) / 100).toLocaleString(); 
@@ -494,9 +208,11 @@ Highcharts.chart('graphs-b', {
 </script>
 
 
-
+{# keeping here so the script can interact with collection objects
+ #}
     <script>
         const ind_data = {{ collections.ind | dump(2) | safe }};
+        const pac_data = {{ collections.pacs | dump(2) | safe }};
 
         var special_index = 1;
         var i = 0
@@ -507,12 +223,24 @@ Highcharts.chart('graphs-b', {
                 return;
             }
         });
+        
+        var pac_special_index = 1;
+        var i = 0
+        pac_data.forEach( element =>{
+            i =  i +1;
+            if(element.contributor_name=="AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE"){
+                pac_special_index = i-1;
+                return;
+            }
+        });
         const swiper = new Swiper('#swiper-a', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
         slidesPerView:3.5,
         spaceBetween:15,
+        initialSlide: pac_special_index,
+
         breakpoints:
         {
             0: {
@@ -533,36 +261,6 @@ Highcharts.chart('graphs-b', {
         navigation: {
           nextEl: '#swiper-button-next-swiper-a',
           prevEl: '#swiper-button-prev-swiper-a',
-        },
-
-          });  
-        const swiper_b = new Swiper('#swiper-b', {
-        // Optional parameters
-        direction: 'horizontal',
-        initialSlide: special_index,
-        loop: true,
-        slidesPerView:3.5,
-        spaceBetween:15,
-        breakpoints:
-        {
-            0: {
-            slidesPerView: 1,
-            spaceBetween: 10
-            },
-            320: {
-            slidesPerView: 2,
-            spaceBetween: 15
-            },
-            640: {
-            slidesPerView: 3.5,
-            spaceBetween: 15
-            },
-        },
-        centeredSlides: true,
-        // Navigation arrows
-        navigation: {
-          nextEl: '#swiper-button-next-swiper-b',
-          prevEl: '#swiper-button-prev-swiper-b',
         },
 
           });  

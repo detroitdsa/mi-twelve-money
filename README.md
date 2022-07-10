@@ -6,8 +6,9 @@ Start by installing dependencies and downloading the donor information:
 
 ```
 npm install
-export DATA_CSV_URL="https://..." - https://docs.google.com/spreadsheets/d/1u8fSPEYzcmBkzH5lpuWNRwGKXsTnKcwI97uE4P36UVU/gviz/tq?tqx=out:csv&sheet="Combined" (current one used for testing)
+export DATA_CSV_URL="https://..." - https://docs.google.com/spreadsheets/d/141U1JNSxRRFQ3tOQjyQwvBDHxlbS9iLNCqO6E8L_cGs/gviz/tq?tqx=out:csv&sheet="Working sheet" (current one used for testing)
 
+    // "export-curated":"export DATA_CSV_URL='https://docs.google.com/spreadsheets/d/141U1JNSxRRFQ3tOQjyQwvBDHxlbS9iLNCqO6E8L_cGs/gviz/tq?tqx=out:csv&sheet="Final Sheet"',
 
 npm run fetch:linux - for linux machines
 npm run fetch:win64 - for windows 64 bit machines.

@@ -6,8 +6,10 @@
   "scripts": {
     "develop": "eleventy --serve",
     "build": "eleventy",
-    "fetch:linux": "curl -L -o src/_data/donors.csv ${DATA_CSV_URL}",
-    "fetch:win64": "curl -L -o src/_data/donors.csv %DATA_CSV_URL%"
-
+    "export-full":"export DATA_FULL_CSV_URL='https://docs.google.com/spreadsheets/d/141U1JNSxRRFQ3tOQjyQwvBDHxlbS9iLNCqO6E8L_cGs/gviz/tq?tqx=out:csv&sheet=\"Combined\"'",
+    "fetch-full:linux": "curl -L -o src/_data/donors.csv ${DATA_FULL_CSV_URL}",
+    "fetch-full:win64": "curl -L -o src/_data/donors.csv %DATA_CSV_URL%",
+    "fetch-curated": "curl -L -o src/_data/curated-donors.csv ${DATA_CSV_URL}",
+    "fetch":"npm run -s fetch-curated & npm run -s fetch-full:linux"
   }
 }
