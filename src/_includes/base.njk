@@ -5,10 +5,19 @@
     <link rel="stylesheet" href="assets/css/high-charts-style.css" type="text/css">
     {# <link rel="stylesheet" href="assets/css/highcharts.css" type="text/css"> #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
+        <script src=
+        "https://d3js.org/d3.v4.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
    <link rel="icon" href="assets/Favicon.png">
 
    
@@ -81,21 +90,32 @@
                 Why are Israel-focused PACs spending millions on a race in Michigan?
             </h2>
             <p>
-                Dark-money PACs and their friends in the billionaire class are <a class="links" href="https://www.theguardian.com/politics/2022/may/17/pro-israel-lobby-defeat-democrats-palestinians-2022">spending millions</a> to divide us against each other in Southestern Michigan. As long as the wealthy can keep us distracted and fighting each other, we won’t ask why the US government, enabled by both parties, is giving <a class="links" href="https://www.bbc.com/news/57170576">tens of billions</a> of dollars every year to fund forever wars in Israel and the Middle East — instead of spending that money on schools, infrastructure, or healthcare in Michigan.
+                Dark-money PACs and their friends in the billionaire class are
+                <a class="links" href="https://www.theguardian.com/politics/2022/may/17/pro-israel-lobby-defeat-democrats-palestinians-2022">spending millions</a> 
+                to divide us against each other in Southeastern Michigan. As long as the wealthy can keep us distracted and fighting each other, we won’t ask why the US government, enabled by both parties, is giving 
+                <a class="links" href="https://www.bbc.com/news/57170576">tens of billions</a> 
+               of dollars every year to fund forever wars in Israel and the Middle East — instead of spending that money on schools, infrastructure, or healthcare in Michigan.
             </p>
 
             <p>
                 AIPAC is one of the most
-                <a class="links" href="https://www.thenation.com/article/archive/aipac-omar-israel-congress-anti-semitism/">powerful</a> lobbying organizations in the US, and their goal is to maintain apartheid in Israel-Palestine. They are spending
+                <a class="links" href="https://www.thenation.com/article/archive/aipac-omar-israel-congress-anti-semitism/">powerful</a> 
+                 lobbying organizations in the US, and their goal is to maintain apartheid in Israel-Palestine. They are spending
                 <a class="links" href="https://www.freep.com/story/news/politics/elections/2022/04/15/rashida-tlaib-winfrey-pro-israel-donations/7334371001/"> big</a> 
-                on Rashida’s Democratic opponent.
-                They’ve also <a class="links" href="https://www.theguardian.com/us-news/2022/mar/23/aipac-pro-israel-group-backs-insurrectionist-republicans">poured millions</a> into backing 37 <i>Republicans</i> who voted against certifying Biden’s victory after the January 6 riot at the Capitol. An undemocratic, divided, and violent America makes it easier for them to keep taking money to wage genocide on Palestinians.
+                on Rashida’s Democratic opponent. They’ve also
+                <a class="links" href="https://www.theguardian.com/us-news/2022/mar/23/aipac-pro-israel-group-backs-insurrectionist-republicans">poured millions</a> 
+                into backing 37 <i>Republicans</i> who voted against certifying Biden’s victory after the January 6 riot at the Capitol. An undemocratic, divided, and violent America makes it easier for AIPAC’s backers to keep taking money to oppress and murder Palestinians – money that’s needed here in the new 12th district.
             </p>
         </div>
         <div>
         <h2>
             Wall of Shame
         </h2>
+            <div>
+            {% for row in collections.pacs %}
+                <div class="slide-image" style="background-image: url('{{ row.Images }}'); height: 100%; width: 100%;"></div>
+            {% endfor %}
+            </div>
 
             <h4 style="justify-content: center;align-items: center;text-align: center;margin-left: 10vw;margin-right: 10vw;">
                 Learn more about the worst donors and PACs trying to buy this election.
@@ -138,8 +158,15 @@
             <div class="main-text-right">
             <h2>The new Congressional 12th district</h2>
             <p>
-                Last year, Michigan <a class="links"  href="https://www.michiganradio.org/politics-government/2022-02-15/the-changes-to-michigans-congressional-map-district-by-district">redrew</a> its congressional district map. Rashida used to represent the 13th district, and is now running in the new 12th district. This map shows the boundaries of the new district. Still not sure where you fall? Look up your address <a class="links" href="https://www.washingtonpost.com/elections/interactive/find-your-congressional-district/">here</a>.
+                Last year, Michigan 
+                <a class="links"  href="https://www.michiganradio.org/politics-government/2022-02-15/the-changes-to-michigans-congressional-map-district-by-district">redrew</a> 
+                its congressional district map. Rashida used to represent the 13th district, and is now running in the new 12th district. This map shows the boundaries of the new district. Still not sure where you fall? Type your address here to check with the Census Bureau. 
             </p>
+            <div class="geocoder-input-div">
+                <svg id = "geocoder-search-icon" class="geocoder-search-icon" viewBox="0 0 18 18" xml:space="preserve" width="18" height="18"><path d="M7.4 2.5c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9c1 0 1.8-.2 2.5-.8l3.7 3.7c.2.2.4.3.8.3.7 0 1.1-.4 1.1-1.1 0-.3-.1-.5-.3-.8L11.4 10c.4-.8.8-1.6.8-2.5.1-2.8-2.1-5-4.8-5zm0 1.6c1.8 0 3.2 1.4 3.2 3.2s-1.4 3.2-3.2 3.2-3.3-1.3-3.3-3.1 1.4-3.3 3.3-3.3z"></path></svg>
+                <input id="geocoder-input" type"text" class="geocoder-input" placeholder="Enter an Address" aria-label="Enter an address"></input>
+                <div id="geocoder-results" style="display:none"></div>
+            </div>
             <div class="map-overlay" onclick="style.pointerEvents='none'"></div>
             <div id="map" style="width: 100%; height:40vh; margin:auto;"></div>
             </div>
@@ -170,8 +197,94 @@
 <script src="assets/js/sunbursts.js"></script>
 
 
+<script>
+    document.getElementById("geocoder-search-icon")
+    .addEventListener("click", function(event) {
+        const ke = new KeyboardEvent('keyup', {
+            bubbles: true, cancelable: true, keyCode: 13
+        });
+        document.getElementById("geocoder-input").dispatchEvent(ke);
+    });
+</script>
 
 
+
+
+<script>
+    const projection = d3.geoAlbersUsa();
+    document.getElementById("geocoder-input")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        var geocoder_input = document.getElementById("geocoder-input")
+        if(geocoder_input.value != "" && geocoder_input.value != null){
+            address_string = (geocoder_input.value.replaceAll(' ','+')).replaceAll(',','%2C');
+            url_string = "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address="+address_string+"&benchmark=2020&format=json"
+            $.ajax({
+                type: 'GET',
+                dataType:"jsonp",
+                url: url_string,
+                crossDomain: true,
+                success: function (data, status, xhr) {
+                    var result = null;
+                    if(data.result.addressMatches.length >0)
+                    {
+                        d3.json("/assets/geojson/Chestnut_Congressional.json", function(error,json){
+                            var district = 0;
+                            json.features.forEach( feature =>{
+                                result= !(d3.geoContains(feature,[data.result.addressMatches[0].coordinates.x,data.result.addressMatches[0].coordinates.y] ));
+                                if(result == true)
+                                {
+                                    district =feature.properties.DISTRICTN;
+                                }
+                            });
+                            if(district == 12){
+                                    var geocoder_input = document.getElementById("geocoder-results");
+                                    geocoder_input.style.display = "block";
+                                    geocoder_input.className = "geocoder-results geocoder-results-success";
+                                    geocoder_input.innerHTML="You ARE in the <b>12th</b> congressional district";
+                                }
+                            else{
+                                    var geocoder_input = document.getElementById("geocoder-results");
+                                    geocoder_input.style.display = "block";
+                                    geocoder_input.className = "geocoder-results geocoder-results-info";
+                                    var suffix = ""
+                                    if(district ==1){
+                                        suffix ="st";
+                                    }
+                                    else if(district == 2){
+                                        suffix ="nd";
+                                    }
+                                    else if(district == 3){
+                                        suffix ="rd";
+                                    }
+                                    else{
+                                        suffix ="th";
+                                    }
+                                    geocoder_input.innerHTML ="You are NOT in the 12th congressional district!<br> Your District is the <b>"+district+""+suffix+"</b> congressional district!";
+                            }
+
+                        });
+                    }
+                    else{
+                        var geocoder_input = document.getElementById("geocoder-results");
+                        geocoder_input.style.display = "block";
+                        geocoder_input.className = "geocoder-results geocoder-results-fail";
+                        geocoder_input.textContent="I could not find that address try checking your spelling and try again";
+                    }
+                }
+
+            });
+        }
+        else{
+            var geocoder_input = document.getElementById("geocoder-results");
+            geocoder_input.style.display = "block";
+            geocoder_input.className = "geocoder-results geocoder-results-info";
+            geocoder_input.textContent="Input your address into the search bar";            
+        }
+    }
+});
+</script>
 
 {# keeping here so the script can interact with collection objects
  #}
